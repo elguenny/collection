@@ -1,0 +1,19 @@
+#!/bin/bash
+#####Change Hostname to  Serialnumber#######
+###created by elg######################
+
+hostold=$(cat /etc/hostname)
+hostnew=$(sudo dmidecode -s system-serial-number)
+
+#echo $serial
+#hostnamectl set-hostname $serial
+#hostname -F /etc/hostname
+
+sudo cp /etc/hosts /etc/hosts.orig
+sudo cp /etc/hostname /etc/hostname.orig
+
+sudo sed -i "s/$hostold/$hostnew/g" /etc/hosts
+sudo sed -i "s/$hostold/$hostnew/g" /etc/hostname
+
+sudo service hostname restart
+sudo service networking restart
