@@ -1,0 +1,28 @@
+description "node.js server"
+
+
+# used to be: start on startup
+# until we found some mounts weren't ready yet while booting
+
+start on started mountall
+stop on shutdown
+
+# automatically respawn
+
+respawn
+respawn limit 99 5
+
+script
+# Local Home where the files and modules are located
+    export HOME="/var/www´/"
+# If you dont want to run the server with sudo, just put it there, the user and the path
+    exec sudo -u user /usr//bin/nodejs /var/www/meeting-server/server.js >> /var/log/node.log 2>&1
+
+end script
+
+post-start script
+
+   # optionally put a script here that will notifiy you node has (re)started
+   # /root/bin/hoptoad.sh "node.js has started!"
+
+end script
