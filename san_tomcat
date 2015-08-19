@@ -1,0 +1,4 @@
+keytool -genkeypair -keystore keystoreName -validity 3650 \
+-dname "CN=donald.entenhausen.stadt, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown"  \
+-storepass xxxx -keyalg RSA \
+-alias tomcat -ext SAN=dns:trick.entenhausen.stadt,ip:313.313.313.313
