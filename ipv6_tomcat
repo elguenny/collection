@@ -1,2 +1,2 @@
-nano /etc/default/tomcat7
+#/etc/default/tomcat7
   JAVA_OPTS="-Djava.awt.headless=true -Xmx128m -XX:+UseConcMarkSweepGC  -Djava.net.preferIPv4Stack=true"
