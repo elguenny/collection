@@ -1,0 +1,28 @@
+javascript: (function() % 7 Bif(!document.querySelector(".pdb-article")) % 7 B % 0 A % 09 % 09
+    return %3 B % 0 A % 09 % 7 D % 0 A % 09
+    var text % 3 D JSON.parse(document.querySelector("%23seite > div.pdb-article > script").innerText).articleBody % 3 B % 0 A % 09
+    var debug % 3 D text % 3 B % 0 A % 09
+    var h2 % 3 D document.querySelector(".pdb-article-body").querySelectorAll("h2") % 3 B % 0 A % 09
+    var em % 3 D h2.length % 3 D % 3 D 0 % 0 A % 09 % 09
+    if (em) % 7 B % 0 A % 09 % 09 % 09 h2 % 3 D document.querySelector(".pdb-article-body").querySelectorAll("em") % 3 B % 0 A % 09 % 09 % 7 D % 0 A % 09 % 09
+    if (em % 26 % 26 h2.length % 3 D % 3 D 1) % 7 B % 0 A % 09 % 09 % 09 h2 % 3 D % 5 B % 5 D % 3 B % 0 A % 09 % 09 % 7 D % 0 A % 09 % 09 h2.forEach( % 0 A % 09 % 09 % 09
+        function(currentValue % 2 C index) % 7 B % 0 A % 09 % 09 % 09
+        if (em % 26 % 26 index % 3 D % 3 D h2.length - 1) % 7 B % 0 A % 09 % 09 % 09 % 09
+        return %3 B % 0 A % 09 % 09 % 09 % 7 D % 0 A % 09 % 09 % 09
+        var i % 3 D new DOMParser().parseFromString(currentValue.textContent % 2 C "text%2Fhtml").documentElement.textContent % 3 B % 0 A % 09 % 09 % 09
+        var ii % 3 D i.split(" ") % 3 B % 0 A % 09 % 09 % 09
+        var regex % 3 D "(" % 3 B % 0 A % 09 % 09 % 09
+        for (i % 3 D 0 % 3 B i < ii.length % 3 B i % 2 B % 2 B) % 7 B % 0 A % 09 % 09 % 09 % 09
+        var l % 3 D ii % 5 Bi % 5 D.length % 3 B % 0 A % 09 % 09 % 09 % 09
+        if (l > 0) % 7 B % 0 A % 09 % 09 % 09 % 09 % 09 regex % 2 B % 3 D "%5B%5E%5C%5Cs%5C%5C%5C%5C%5D%5C%7B" % 2 B l % 2 B "%5C%7D " % 0 A % 09 % 09 % 09 % 09 % 7 D % 0 A % 09 % 09 % 09 % 7 D % 0 A % 09 % 09 % 09
+        var regex1 % 3 D new RegExp(regex.trim() % 2 B ")%5B%5C%5C%3F%3A%5D" % 2 C "g") % 3 B % 0 A % 09 % 09 % 09
+        var regex2 % 3 D new RegExp(regex.trim() % 2 B ")%5B%5C%5C%3F%3A %5D" % 2 C "g") % 3 B % 0 A % 09 % 09 % 09
+        var before % 3 D text % 3 B % 0 A % 09 % 09 % 09
+        var found1 % 3 D text.match(regex1) % 3 B % 0 A % 09 % 09 % 09
+        var found2 % 3 D text.match(regex2) % 3 B % 0 A % 09 % 09 % 09
+        var reg % 3 D regex1 % 3 B % 0 A % 09 % 09 % 09
+        if (found2 % 26 % 26 found2.length % 3 D % 3 D 1) % 7 B % 0 A % 09 % 09 % 09 % 09 reg % 3 D regex2 % 3 B % 0 A % 09 % 09 % 09 % 7 D % 0 A % 09 % 09 % 09
+        if (em) % 7 B % 0 A % 09 % 09 % 09 % 09 text % 3 D text.replace(reg % 2 C '<%2Fbr><%2Fbr><strong><em>%241<%2Fem><%2Fstrong><%2Fbr><%2Fbr>') % 3 B % 0 A % 09 % 09 % 09 % 7 D
+        else %7 B % 0 A % 09 % 09 % 09 % 09 text % 3 D text.replace(reg % 2 C '<h2>%241<%2Fh2>') % 3 B % 0 A % 09 % 09 % 09 % 7 D % 0 A % 09 % 09 % 7 D) % 3 B % 0 A % 09
+    var regex2 % 3 D new RegExp("(Von %5B%5E%5C%5Cs%5C%5C%5C%5C%5D%5C%7B2%2C%5C%7D %5B%5E%5C%5Cs%5C%5C%5C%5C%5D%5C%7B2%2C%5C%7D)%24") % 3 B % 0 A % 09 text % 3 D text.replace(regex2 % 2 C '<%2Fbr><%2Fbr><em>%241<%2Fem>') % 3 B % 0 A % 09 document.querySelector(".pdb-article-body").innerHTML % 3 D "<div class%3D%5C"
+    pdb - richtext - field % 5 C "><p>" % 2 B text % 2 B "<%2Fp><%2Fdiv>" % 3 B % 7 D)() % 3 B
