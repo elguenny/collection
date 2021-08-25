@@ -1,15 +1,16 @@
-Put me in /lib/systemd/system/
+# Contents of /etc/systemd/system/myservice.service
+# Put me in /lib/systemd/system/
+
 [Unit]
 Description=My Miscellaneous Service
 After=network.target
 
 [Service]
 Type=simple
-User=nanodano
+User=xyz
 WorkingDirectory=/home/nanodano
 ExecStart=/home/nanodano/my_daemon --option=123
 Restart=on-failure # or always, on-abort, etc
 
 [Install]
 WantedBy=multi-user.target
-@elguenny
