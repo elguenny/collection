@@ -1,0 +1,8 @@
+# /etc/systemd/system/name.timer[Unit]
+Description=Run name every 15-30 minutes
+Requires=name.service[Timer]
+Unit=nname.service
+OnUnitInactiveSec=15m
+RandomizedDelaySec=15m
+AccuracySec=1s[Install]
+WantedBy=timers.target
